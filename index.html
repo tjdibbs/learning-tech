@@ -4,27 +4,196 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning html</title>
-
-    <style>
-      header {
-        height: 200px;
+    <title>Animation And Flexbox</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Calibri, san-serif !important;
       }
 
-      .navigation {
-        height: 100px;
-        background-color: red;
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        line-height: 1.5;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      header {
+        display: flex;
+        gap: 20px;
+        background-color: darkgrey;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .links-container ul {
+        list-style: none;
+        display: flex;
+        column-gap: 10px;
+      }
+
+      .links-container ul a {
+        color: #fafafa;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: block;
+        padding: 5px 10px;
+        border-radius: 50px;
+      }
+
+      header .btn-wrap button.sign-in {
+        outline: none;
+        border: none;
+        padding-block: 10px;
+        padding-inline: 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        color: chocolate;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      main div.card-wrapper {
+        display: flex;
+        flex-direction: row;
+        row-gap: 20px;
+        column-gap: 10px;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin-inline: auto;
+        justify-content: center;
+      }
+
+      main div.card-wrapper .card {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 20px;
+        max-width: 300px;
+        border: 2px solid pink;
+        animation: changecolor 2s infinite alternate linear;
+      }
+
+      main div.card-wrapper .card img {
+        height: 150px;
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .card .card-title {
+        font-weight: 600;
+        color: chocolate;
+      }
+
+      .card .card-actions .btn {
+        font-weight: 600;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        margin-top: 10px;
+        background-color: chocolate;
+        color: #fff;
+        border: 2px solid pink;
+      }
+
+      @keyframes changecolor {
+        from {
+          transform: scale(1);
+          filter: hue-rotate(0deg);
+        }
+        to {
+          transform: scale(0.8);
+          filter: hue-rotate(360deg);
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <div class="logo-wrapper" id="logo" data-name="logo">
-        <img src="/logo-dark.png" alt="Our logo" />
-
-        <div></div>
+      <div class="logo">
+        <h3>Portfolio Site</h3>
       </div>
-      <div class="navigation"></div>
+      <nav class="links-container">
+        <ul>
+          <li>
+            <a href="/#">About us</a>
+          </li>
+          <li>
+            <a href="/#">Contact us</a>
+          </li>
+          <li>
+            <a href="/#">Services</a>
+          </li>
+          <li>
+            <a href="/#">Terms & condition</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="btn-wrap">
+        <button class="sign-in">Sign in</button>
+      </div>
     </header>
+    <main>
+      <!-- Addiing line in html -->
+      <hr style="margin-bottom: 20px" />
+
+      <div class="card-wrapper" role="list">
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="/images/web.jpg" alt="Web Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Web Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              ipsum sapiente totam!
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="/images/mobile.jpg" alt="mobile Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Mobile Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis debitis maiores nostrum.
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="/images/desktop.jpg" alt="Desktop Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Desktop Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis debitis maiores nostrum.
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
