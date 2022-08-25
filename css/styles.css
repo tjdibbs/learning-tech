@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, san-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  line-height: 1.5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  background-color: darkgrey;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.links-container ul {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+.links-container ul a {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+header .btn-wrap button.sign-in {
+  outline: none;
+  border: none;
+  padding-block: 10px;
+  padding-inline: 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: chocolate;
+}
+
+main {
+  padding: 20px;
+}
+
+main div.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+main div.card-wrapper .card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 300px;
+  border: 2px solid pink;
+  animation: changecolor 2s infinite alternate linear;
+}
+
+main div.card-wrapper .card img {
+  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card .card-title {
+  font-weight: 600;
+  color: chocolate;
+}
+
+.card .card-actions .btn {
+  font-weight: 600;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  background-color: chocolate;
+  color: #fff;
+  border: 2px solid pink;
+}
+
+@keyframes changecolor {
+  from {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    transform: scale(0.8);
+    filter: hue-rotate(360deg);
+  }
+}

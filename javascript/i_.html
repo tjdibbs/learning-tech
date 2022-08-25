@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation And Flexbox</title>
+
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Calibri, san-serif !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: #2e962b;
+        line-height: 1.5;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h3>Portfolio Site</h3>
+      </div>
+      <nav class="links-container">
+        <ul>
+          <li>
+            <a href="/#">About us</a>
+          </li>
+          <li>
+            <a href="/#">Contact us</a>
+          </li>
+          <li>
+            <a href="/#">Services</a>
+          </li>
+          <li>
+            <a href="/#">Terms & condition</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="btn-wrap">
+        <button class="sign-in">Sign in</button>
+      </div>
+    </header>
+    <main>
+      <!-- Addiing line in html -->
+      <hr style="margin-bottom: 20px" />
+
+      <div class="card-wrapper" role="list">
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="" alt="Web Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Web Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              ipsum sapiente totam!
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="/images/mobile.jpg" alt="mobile Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Mobile Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis debitis maiores nostrum.
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-media">
+            <img src="/images/desktop.jpg" alt="Desktop Application" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">Desktop Application</div>
+            <div class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis debitis maiores nostrum.
+            </div>
+            <div class="card-actions">
+              <button class="learn-more btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
